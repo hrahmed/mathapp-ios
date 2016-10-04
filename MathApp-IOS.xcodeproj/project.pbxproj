@@ -40,6 +40,7 @@
 			children = (
 				600BCFEE1DA05B4300DDA11F /* MathApp-IOS */,
 				600BCFED1DA05B4300DDA11F /* Products */,
+				F5E1AFB44D4BC803A882CB9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +63,13 @@
 				600BCFFB1DA05B4300DDA11F /* Info.plist */,
 			);
 			path = "MathApp-IOS";
+			sourceTree = "<group>";
+		};
+		F5E1AFB44D4BC803A882CB9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +305,7 @@
 				600BD0001DA05B4300DDA11F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
