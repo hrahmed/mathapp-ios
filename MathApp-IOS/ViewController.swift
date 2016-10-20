@@ -39,25 +39,25 @@ class ViewController: UIViewController {
         
         if index == 0 {
             operation = "add"
+            urlString = "http://\(host):\(port)/MathProxy/rest/hello/math?operation=\(operation)&value1=\(value1String)&value2=\(value2String)"
+            executeGetAdd()
         } else if index == 1 {
             operation = "subtract"
+            urlString = "http://\(host):\(port)/MathProxy/rest/hello/math?operation=\(operation)&value1=\(value1String)&value2=\(value2String)"
+            executeGetSubtract()
         } else if index == 2 {
             operation = "multiply"
+            urlString = "http://\(host):\(port)/MathProxy/rest/hello/math?operation=\(operation)&value1=\(value1String)&value2=\(value2String)"
+            executeGetMultiply()
         } else if index == 3 {
             operation = "divide"
+            urlString = "http://\(host):\(port)/MathProxy/rest/hello/math?operation=\(operation)&value1=\(value1String)&value2=\(value2String)"
+            executeGetDivide()
         } else {
             operation = "error"
         }
         
-        
-        urlString = "http://\(host):\(port)/MathProxy/rest/hello/math?operation=\(operation)&value1=\(value1String)&value2=\(value2String)"
-        
         print("*** URL2 is: \(urlString)")
-        
-        executeGet()
-        
-    
-        // rest test
         
     }
     
@@ -97,10 +97,154 @@ class ViewController: UIViewController {
             
         })
         task.resume()
+    }
+    
+    
+    
+    // This makes the GET call to httpbin.org. It simply gets the IP address and displays it on the screen.
+    func executeGetAdd() {
+        let config = URLSessionConfiguration.default // Session Configuration
+        let session = URLSession(configuration: config) // Load configuration into Session
+        let url = URL(string: urlString)!
+        
+        let task = session.dataTask(with: url, completionHandler: {
+            (data, response, error) in
+            
+            if error != nil {
+                
+                print(error!.localizedDescription)
+                
+            } else {
+                
+                do {
+                    
+                    if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any]
+                    {
+                        
+                        //Implement your logic
+                        print(json)
+                    }
+                    
+                } catch {
+                    
+                    print("error in JSONSerialization")
+                    
+                }
+                
+                
             }
-    
-    
-    
+            
+        })
+        task.resume()
+    }
+    // This makes the GET call to httpbin.org. It simply gets the IP address and displays it on the screen.
+    func executeGetSubtract() {
+        let config = URLSessionConfiguration.default // Session Configuration
+        let session = URLSession(configuration: config) // Load configuration into Session
+        let url = URL(string: urlString)!
+        
+        let task = session.dataTask(with: url, completionHandler: {
+            (data, response, error) in
+            
+            if error != nil {
+                
+                print(error!.localizedDescription)
+                
+            } else {
+                
+                do {
+                    
+                    if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any]
+                    {
+                        
+                        //Implement your logic
+                        print(json)
+                    }
+                    
+                } catch {
+                    
+                    print("error in JSONSerialization")
+                    
+                }
+                
+                
+            }
+            
+        })
+        task.resume()
+    }
+    // This makes the GET call to httpbin.org. It simply gets the IP address and displays it on the screen.
+    func executeGetMultiply() {
+        let config = URLSessionConfiguration.default // Session Configuration
+        let session = URLSession(configuration: config) // Load configuration into Session
+        let url = URL(string: urlString)!
+        
+        let task = session.dataTask(with: url, completionHandler: {
+            (data, response, error) in
+            
+            if error != nil {
+                
+                print(error!.localizedDescription)
+                
+            } else {
+                
+                do {
+                    
+                    if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any]
+                    {
+                        
+                        //Implement your logic
+                        print(json)
+                    }
+                    
+                } catch {
+                    
+                    print("error in JSONSerialization")
+                    
+                }
+                
+                
+            }
+            
+        })
+        task.resume()
+    }
+    // This makes the GET call to httpbin.org. It simply gets the IP address and displays it on the screen.
+    func executeGetDivide() {
+        let config = URLSessionConfiguration.default // Session Configuration
+        let session = URLSession(configuration: config) // Load configuration into Session
+        let url = URL(string: urlString)!
+        
+        let task = session.dataTask(with: url, completionHandler: {
+            (data, response, error) in
+            
+            if error != nil {
+                
+                print(error!.localizedDescription)
+                
+            } else {
+                
+                do {
+                    
+                    if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any]
+                    {
+                        
+                        //Implement your logic
+                        print(json)
+                    }
+                    
+                } catch {
+                    
+                    print("error in JSONSerialization")
+                    
+                }
+                
+                
+            }
+            
+        })
+        task.resume()
+    }
     
     
     override func viewDidLoad() {
