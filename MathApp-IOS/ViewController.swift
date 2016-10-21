@@ -53,8 +53,13 @@ class ViewController: UIViewController {
             operation = "divide"
             urlString = "http://\(host):\(port)/MathProxy/rest/hello/math?operation=\(operation)&value1=\(value1String)&value2=\(value2String)"
             executeGetDivide()
-        } else {
+        } else if index == 4 {
             operation = "error"
+            urlString = "http://\(host):\(port)/MathProxy/rest/hello/math?operation=\(operation)&value1=\(value1String)&value2=\(value2String)"
+            executeGetDivide()
+        } else {
+            operation = "crash"
+            abort()
         }
         
         print("*** URL2 is: \(urlString)")
