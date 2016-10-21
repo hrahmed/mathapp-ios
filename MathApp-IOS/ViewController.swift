@@ -103,6 +103,12 @@ class ViewController: UIViewController {
     
     // This makes the GET call to httpbin.org. It simply gets the IP address and displays it on the screen.
     func executeGetAdd() {
+        
+        // start AXA transaction
+        CAMDOReporter.startApplicationTransaction(withName: "Add", service: "MathApp") { (YES, nil) in
+            print("Add Started")
+        }
+        
         let config = URLSessionConfiguration.default // Session Configuration
         let session = URLSession(configuration: config) // Load configuration into Session
         let url = URL(string: urlString)!
@@ -131,14 +137,24 @@ class ViewController: UIViewController {
                     
                 }
                 
-                
             }
             
+            // Stop AXA transaction
+            CAMDOReporter.stopApplicationTransaction(withName: "Add", completionHandler: { (YES, nil) in
+                print("Add Stopped")
+            })
         })
         task.resume()
     }
+    
     // This makes the GET call to httpbin.org. It simply gets the IP address and displays it on the screen.
     func executeGetSubtract() {
+        
+        // start AXA transaction
+        CAMDOReporter.startApplicationTransaction(withName: "Subtract", service: "MathApp") { (YES, nil) in
+            print("Subtract Started")
+        }
+        
         let config = URLSessionConfiguration.default // Session Configuration
         let session = URLSession(configuration: config) // Load configuration into Session
         let url = URL(string: urlString)!
@@ -169,12 +185,23 @@ class ViewController: UIViewController {
                 
                 
             }
+            
+            // Stop AXA transaction
+            CAMDOReporter.stopApplicationTransaction(withName: "Subtract", completionHandler: { (YES, nil) in
+                print("Subtract Stopped")
+            })
             
         })
         task.resume()
     }
     // This makes the GET call to httpbin.org. It simply gets the IP address and displays it on the screen.
     func executeGetMultiply() {
+        
+        // start AXA transaction
+        CAMDOReporter.startApplicationTransaction(withName: "Multiply", service: "MathApp") { (YES, nil) in
+            print("Multiply Started")
+        }
+        
         let config = URLSessionConfiguration.default // Session Configuration
         let session = URLSession(configuration: config) // Load configuration into Session
         let url = URL(string: urlString)!
@@ -205,12 +232,22 @@ class ViewController: UIViewController {
                 
                 
             }
+            // Stop AXA transaction
+            CAMDOReporter.stopApplicationTransaction(withName: "Multiply", completionHandler: { (YES, nil) in
+                print("Multiply Stopped")
+            })
             
         })
         task.resume()
     }
     // This makes the GET call to httpbin.org. It simply gets the IP address and displays it on the screen.
     func executeGetDivide() {
+        
+        // start AXA transaction
+        CAMDOReporter.startApplicationTransaction(withName: "Divide", service: "MathApp") { (YES, nil) in
+            print("Divide Started")
+        }
+        
         let config = URLSessionConfiguration.default // Session Configuration
         let session = URLSession(configuration: config) // Load configuration into Session
         let url = URL(string: urlString)!
@@ -241,6 +278,11 @@ class ViewController: UIViewController {
                 
                 
             }
+            
+            // Stop AXA transaction
+            CAMDOReporter.stopApplicationTransaction(withName: "Divide", completionHandler: { (YES, nil) in
+                print("Divide Stopped")
+            })
             
         })
         task.resume()
