@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Application</key>
+	<array>
+		<dict>
+			<key>profileURL</key>
+			<string>https://collector.axa.trials.ca.com/profiles/HAROON.AHMED%40CA.COM-C/MathApp-IOS</string>
+			<key>baseURL</key>
+			<string>https://collector.axa.trials.ca.com</string>
+			<key>collectorUploadURL</key>
+			<string>https://collector.axa.trials.ca.com/write_bulk</string>
+			<key>appId</key>
+			<string>MathApp-IOS</string>
+			<key>tenantID</key>
+			<string>HAROON.AHMED@CA.COM-C</string>
+			<key>appKey</key>
+			<string>6370ee00-89da-11e6-bfa9-a9dcb512d6bd</string>
+		</dict>
+	</array>
+</dict>
+</plist>
