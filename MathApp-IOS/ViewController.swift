@@ -53,6 +53,14 @@ class ViewController: UIViewController {
             operation = "divide"
             urlString = "http://\(host):\(port)/MathProxy/rest/hello/math?operation=\(operation)&value1=\(value1String)&value2=\(value2String)"
             executeGetDivide()
+        } else if index == 4 {
+            operation = "error"
+            urlString = "http://\(host):\(port)/MathProxy/rest/hello/math?operation=\(operation)&value1=\(value1String)&value2=\(value2String)"
+            executeGetError()
+        } else if index == 5 {
+            operation = "crash"
+            fatalError()
+            
         } else {
             operation = "error"
         }
@@ -288,6 +296,53 @@ class ViewController: UIViewController {
         task.resume()
     }
     
+    func executeGetError() {
+        
+        // start AXA transaction
+        CAMDOReporter.startApplicationTransaction(withName: "Divide", service: "MathApp") { (YES, nil) in
+            print("Divide Started")
+        }
+        
+        let config = URLSessionConfiguration.default // Session Configuration
+        let session = URLSession(configuration: config) // Load configuration into Session
+        let url = URL(string: urlString)!
+        
+        let task = session.dataTask(with: url, completionHandler: {
+            (data, response, error) in
+            
+            if error != nil {
+                
+                print(error!.localizedDescription)
+                
+            } else {
+                
+                do {
+                    
+                    if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any]
+                    {
+                        
+                        //Implement your logic
+                        print(json)
+                    }
+                    
+                } catch {
+                    
+                    print("error in JSONSerialization")
+                    
+                }
+                
+                
+            }
+            
+            // Stop AXA transaction
+            CAMDOReporter.stopApplicationTransaction(withName: "Divide", completionHandler: { (YES, nil) in
+                print("Divide Stopped")
+            })
+            
+        })
+        task.resume()
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

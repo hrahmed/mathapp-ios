@@ -47,6 +47,8 @@
                                     <segment title="-"/>
                                     <segment title="x"/>
                                     <segment title="/"/>
+                                    <segment title="E"/>
+                                    <segment title="C"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Host" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDE-cf-oPN">
