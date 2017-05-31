@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Application</key>
+	<array>
+		<dict>
+			<key>profileURL</key>
+			<string>https://collector-axa.cloud.ca.com/api/1/urn:ca:tenantId:DCD40CB2-A8EC-42B9-9CE1-690EF9EA58C3/urn:ca:appId:MathApp/profile</string>
+			<key>baseURL</key>
+			<string>https://collector-axa.cloud.ca.com</string>
+			<key>collectorUploadURL</key>
+			<string>https://collector-axa.cloud.ca.com/api/1/urn:ca:tenantId:DCD40CB2-A8EC-42B9-9CE1-690EF9EA58C3/urn:ca:appId:MathApp/mobileMetrics</string>
+			<key>appId</key>
+			<string>MathApp</string>
+			<key>tenantID</key>
+			<string>DCD40CB2-A8EC-42B9-9CE1-690EF9EA58C3</string>
+			<key>appKey</key>
+			<string>ae3abaf0-34bc-11e7-b7ff-85ee1c04d4e9</string>
+		</dict>
+	</array>
+</dict>
+</plist>

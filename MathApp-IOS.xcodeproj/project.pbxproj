@@ -12,6 +12,10 @@
 		600BCFF51DA05B4300DDA11F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600BCFF31DA05B4300DDA11F /* Main.storyboard */; };
 		600BCFF71DA05B4300DDA11F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 600BCFF61DA05B4300DDA11F /* Assets.xcassets */; };
 		600BCFFA1DA05B4300DDA11F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600BCFF81DA05B4300DDA11F /* LaunchScreen.storyboard */; };
+		6049AC8F1EDE7C3B005934AA /* ca-maa-ios-sdk.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6049AC8B1EDE7C3B005934AA /* ca-maa-ios-sdk.xcconfig */; };
+		6049AC901EDE7C3B005934AA /* libCAMobileAppAnalytics-simulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6049AC8D1EDE7C3B005934AA /* libCAMobileAppAnalytics-simulator.a */; };
+		6049AC911EDE7C3B005934AA /* libCAMobileAppAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6049AC8E1EDE7C3B005934AA /* libCAMobileAppAnalytics.a */; };
+		6049AC941EDE8842005934AA /* MathApp_camdo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6049AC931EDE8842005934AA /* MathApp_camdo.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,12 @@
 		600BCFF61DA05B4300DDA11F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		600BCFF91DA05B4300DDA11F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		600BCFFB1DA05B4300DDA11F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6049AC8B1EDE7C3B005934AA /* ca-maa-ios-sdk.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "ca-maa-ios-sdk.xcconfig"; sourceTree = "<group>"; };
+		6049AC8C1EDE7C3B005934AA /* CAMDOReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMDOReporter.h; sourceTree = "<group>"; };
+		6049AC8D1EDE7C3B005934AA /* libCAMobileAppAnalytics-simulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCAMobileAppAnalytics-simulator.a"; sourceTree = "<group>"; };
+		6049AC8E1EDE7C3B005934AA /* libCAMobileAppAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCAMobileAppAnalytics.a; sourceTree = "<group>"; };
+		6049AC921EDE82E4005934AA /* MathApp-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MathApp-Bridging-header.h"; sourceTree = "<group>"; };
+		6049AC931EDE8842005934AA /* MathApp_camdo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MathApp_camdo.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6049AC911EDE7C3B005934AA /* libCAMobileAppAnalytics.a in Frameworks */,
+				6049AC901EDE7C3B005934AA /* libCAMobileAppAnalytics-simulator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +50,7 @@
 		600BCFE31DA05B4300DDA11F = {
 			isa = PBXGroup;
 			children = (
+				6049AC8A1EDE7C3B005934AA /* CAMobileAppAnalytics */,
 				600BCFEE1DA05B4300DDA11F /* MathApp-IOS */,
 				600BCFED1DA05B4300DDA11F /* Products */,
 				F5E1AFB44D4BC803A882CB9A /* Frameworks */,
@@ -55,14 +68,27 @@
 		600BCFEE1DA05B4300DDA11F /* MathApp-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				6049AC931EDE8842005934AA /* MathApp_camdo.plist */,
 				600BCFEF1DA05B4300DDA11F /* AppDelegate.swift */,
 				600BCFF11DA05B4300DDA11F /* ViewController.swift */,
 				600BCFF31DA05B4300DDA11F /* Main.storyboard */,
 				600BCFF61DA05B4300DDA11F /* Assets.xcassets */,
 				600BCFF81DA05B4300DDA11F /* LaunchScreen.storyboard */,
 				600BCFFB1DA05B4300DDA11F /* Info.plist */,
+				6049AC921EDE82E4005934AA /* MathApp-Bridging-header.h */,
 			);
 			path = "MathApp-IOS";
+			sourceTree = "<group>";
+		};
+		6049AC8A1EDE7C3B005934AA /* CAMobileAppAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				6049AC8B1EDE7C3B005934AA /* ca-maa-ios-sdk.xcconfig */,
+				6049AC8C1EDE7C3B005934AA /* CAMDOReporter.h */,
+				6049AC8D1EDE7C3B005934AA /* libCAMobileAppAnalytics-simulator.a */,
+				6049AC8E1EDE7C3B005934AA /* libCAMobileAppAnalytics.a */,
+			);
+			path = CAMobileAppAnalytics;
 			sourceTree = "<group>";
 		};
 		F5E1AFB44D4BC803A882CB9A /* Frameworks */ = {
@@ -132,6 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				600BCFFA1DA05B4300DDA11F /* LaunchScreen.storyboard in Resources */,
+				6049AC8F1EDE7C3B005934AA /* ca-maa-ios-sdk.xcconfig in Resources */,
+				6049AC941EDE8842005934AA /* MathApp_camdo.plist in Resources */,
 				600BCFF71DA05B4300DDA11F /* Assets.xcassets in Resources */,
 				600BCFF51DA05B4300DDA11F /* Main.storyboard in Resources */,
 			);
@@ -173,6 +201,7 @@
 /* Begin XCBuildConfiguration section */
 		600BCFFC1DA05B4300DDA11F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6049AC8B1EDE7C3B005934AA /* ca-maa-ios-sdk.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -216,12 +245,14 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/ahmha02/Documents/projects/ios/mathapp-ios/MathApp-IOS/MathApp-Bridging-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		600BCFFD1DA05B4300DDA11F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6049AC8B1EDE7C3B005934AA /* ca-maa-ios-sdk.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -257,6 +288,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/ahmha02/Documents/projects/ios/mathapp-ios/MathApp-IOS/MathApp-Bridging-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -264,10 +296,15 @@
 		};
 		600BCFFF1DA05B4300DDA11F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6049AC8B1EDE7C3B005934AA /* ca-maa-ios-sdk.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "MathApp-IOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CAMobileAppAnalytics",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wily.MathApp-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -276,10 +313,15 @@
 		};
 		600BD0001DA05B4300DDA11F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6049AC8B1EDE7C3B005934AA /* ca-maa-ios-sdk.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "MathApp-IOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CAMobileAppAnalytics",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wily.MathApp-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
